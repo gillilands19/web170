@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:700);
+
+progress {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+ position: fixed;
+ overflow: hidden;
+ width: 100%;
+ align-content: center;
+ height: 100%;
+ top: 0;
+ left: 0;
+ z-index:10000;
+ background: radial-gradient(circle closest-corner,rgba(146,138,93,.98), rgba(62,49,40,.98));
+ padding: 0;
+ border: none;
+ font-family: "Raleway", sans-serif;
+ font-weight: 700;
+ font-size: 120px;
+ transition: height .2s;
+
+}
+
+progress.hidden{
+  display:none;
+  transition-delay: .2s;
+}
+
+progress::before {
+  content: 'Loading...' attr(value) '%' ;
+  z-index: 10002;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:40%; left: 0; right: 0; bottom: 0;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 0.62em;
+  color: rgba(62, 49, 40, 0.75);
+    }
+
+#loading{
+    display:none;
+    }
+
+progress::-webkit-progress-bar{
+    height: 30px;
+    width:100%;
+    background-color: #928a5d;
+    margin-top: 35%;
+}
+progress::-webkit-progress-value{
+    background-color: #3e3128;
+    opacity: .75;
+    height: 30px;
+    width:100%;
+}
+
+progress::-moz-progress-bar {
+    display: block;
+    margin: 25% 0 25% 0;
+    height:5%;
+    width:100%;
+    background-color: #3e3128;
+}
+
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+
+progress::-webkit-progress-bar::before {
+  content: 'Loading...';
+  z-index: 10002;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:40%; left: 0; right: 0; bottom: 0;
+  text-align: center;
+  margin:0 auto;
+  font-size: 1em;
+  line-height: .62em;
+  color: rgba(62,49,40,0.75);
+    }
+}
+/* ------------------------------ */
+
+@media all and (max-width:767px){
+    progress{
+        display:none;
+    }
+}
+
+@-moz-document url-prefix(){
+   #loading{
+        position:fixed;
+        width:100%;
+        top: 25%;
+        left: 25%
+        display:block;
+        z-index:10005;
+        font-size: 120px;
+        color: #3e3128;
+        text-align:center;
+    }
+}
+
+@supports (-moz-appearance:none){
+    #loading{
+        display:block;
+        position:fixed;
+        width:100%;
+        top: 25%;
+        left: 25%
+        display:block;
+        z-index:10005;
+        font-size: 120px;
+        color: #3e3128;
+        text-align:center;
+    }
+}
+    
+    

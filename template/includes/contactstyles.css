@@ -1,0 +1,98 @@
+form{
+    font-family: 'Raleway';
+    width: 75%;
+    margin: 0 auto;
+    border: 0;
+}
+
+form div{
+    width:100%;
+    margin: 15px 0;
+}
+
+input::-webkit-input-placeholder{
+    color:#ffffff;
+    opacity: 0.5;
+}
+
+form div{
+    text-align:left;
+}
+
+label{
+    
+}
+
+input{
+    width: 75%;
+    height: 10%;
+    min-width: 250px;
+    height: 2.5em;
+    background-color: rgba(146,138,93,0.9);
+    border: none;
+    box-shadow: 1px 1px 8px #000000;
+}
+
+input[type="text"], input[type="email"], textarea[name="Comments"] {
+    font-size: 1em;
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+input[type="submit"] {
+    width:100px;
+    height: 50px;
+    min-width: 10px;
+    font-size: 1em;
+    color:#ffffff;
+}
+
+textarea{
+    width:100%;
+    min-width: 250px;
+    height: 10em;
+    background-color: rgba(146,138,93,.9);
+    color: #ffffff;
+    box-shadow: 1px 1px 8px #000000;
+}
+
+textarea::-webkit-input-placeholder{
+    color:#ffffff;
+    padding:0;
+    opacity: 0.5;
+}
+
+.g-recaptcha iframe {
+    height: 90px  !important;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-feedback{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    padding: 25% 0 0 0;
+    background-color: rgba(0,0,0,0.85);
+    z-index:9999;
+}
+
+.contact-feedback h2, .contact-feedback p{
+    color:#ffffff;
+    opacity: 1.0;
+    text-align: center;
+    
+}
+
+@media all and (max-width: 320px){
+    .g-recaptcha iframe{
+        max-width:230px;
+        overflow:hidden;
+    }
+    
+    form{
+        margin: 0 0 0 20px;
+    }
+}
