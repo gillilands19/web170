@@ -108,7 +108,7 @@
 
     .panel.open {
       font-size:25px;
-        /* will take up 5 times the amount of space as the rest. Think of it as ratios. Above the panels were displayed with a flex of 1. Now when each panel also has a class of open, it will be 5:1 */
+        /* will take up 3 times the amount of space as the rest. Think of it as ratios. Above the panels were displayed with a flex of 1. Now when each panel also has a class of open, it will be 3:1 */
         flex: 3;
     }
 
@@ -142,10 +142,6 @@
       
       const panelOpeners = document.querySelectorAll('.panel_link');
       const panels = document.querySelectorAll('.panel');
-      console.log(panelOpeners);
-      console.log(panels);
-      
-      
       
       function toggleOpen(e) {
           if (e.target.parentNode.className.includes('panel1')) {
@@ -161,16 +157,8 @@
       
       }
       
-     /* function toggleActive(e) {
-          console.log(e);
-          if (e.propertyName.includes('flex')) {
-              e.classList.toggle('open-active');
-          }
-      }*/
-      
       /* The reason toggle open isnt called like "toggleOpen()" is because that would run on page load. we dont want to run the function but we want to say hey, when a click event happens go find the function and run it. */
       panelOpeners.forEach(panelOpener => panelOpener.addEventListener('click', toggleOpen));
-      /*panelOpeners.forEach(panelOpener => panelOpener.addEventListener('transitionend', toggleActive));*/
 
   </script>
 
