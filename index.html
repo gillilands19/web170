@@ -140,22 +140,37 @@
 
   <script>
       
+      const panelOpeners = document.querySelectorAll('.panel_link');
       const panels = document.querySelectorAll('.panel');
+      console.log(panelOpeners);
+      console.log(panels);
       
-      function toggleOpen() {
-          this.classList.toggle('open');
-      }
       
-      function toggleActive(e) {
-          console.log(e.propertyName);
-          if (e.propertyName.includes('flex')) {
-              this.classList.toggle('open-active');
+      
+      function toggleOpen(e) {
+          if (e.target.parentNode.className.includes('panel1')) {
+              panels[0].classList.toggle('open');
+              panels[0].classList.toggle('open-active');
+          } else if (e.target.parentNode.className.includes('panel2')) {
+              panels[1].classList.toggle('open');
+              panels[1].classList.toggle('open-active');
+          } else {
+              panels[2].classList.toggle('open');
+              panels[2].classList.toggle('open-active');
           }
+      
       }
+      
+     /* function toggleActive(e) {
+          console.log(e);
+          if (e.propertyName.includes('flex')) {
+              e.classList.toggle('open-active');
+          }
+      }*/
       
       /* The reason toggle open isnt called like "toggleOpen()" is because that would run on page load. we dont want to run the function but we want to say hey, when a click event happens go find the function and run it. */
-      panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-      panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+      panelOpeners.forEach(panelOpener => panelOpener.addEventListener('click', toggleOpen));
+      /*panelOpeners.forEach(panelOpener => panelOpener.addEventListener('transitionend', toggleActive));*/
 
   </script>
 
