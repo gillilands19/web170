@@ -1,5 +1,3 @@
-//TODO modify classes/styles so content and sidebar can fit in three column grid
-
 <?php
 
 if(is_front_page()) {
@@ -9,8 +7,8 @@ if(is_front_page()) {
 }
     ?>
         <!-- BEGIN CONTENT -->
-        <div class="blog-content grid group">
-            <section class="about-rpr col span_2_of_3">
+        <div class="content grid group">
+            <section class="about-rpr col span_3_of_3">
                 <br>
                 <br>
                 
@@ -25,9 +23,8 @@ if(is_front_page()) {
 					
 				
                 </article>
+            
             </section>
-			
-			<?php get_sidebar(); ?>
             
         <!-- BEGIN SERVICES THUMBNAILS -->
 			<div class="services-thumbnails grid group"></div>
@@ -48,7 +45,7 @@ if(is_front_page()) {
             </div>
         </a>
 	</div>
-	<p>index.php</p>
+<p>page.php</p>
 	
 <?php get_footer(); ?>
 	

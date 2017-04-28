@@ -178,7 +178,7 @@ li a {
     transition: all 100ms ease-in;
     font-weight:600;
     text-decoration: underline;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 
 .medium-up-menu ul {
@@ -193,8 +193,14 @@ li a {
 
 .medium-up-menu li:hover > ul {
     display: block;
-    margin-top: -10px;
+    margin-top: -5px;
     padding:0;
+	z-index:10001;
+}
+
+.home .logo-nav-header .medium-up-menu li:hover > ul {
+	margin-top: -19.6%;
+	background-color: rgba(255,255,255, 0.5);
 }
 
 .medium-up-menu li:hover > ul > li {
@@ -236,13 +242,19 @@ li a {
 .content {
     width: 85%;
     background-color: #ffffff;
-    margin: 5% auto 0 auto;
+    margin: 6% auto 0 auto;
     
+}
+
+.blog-content {
+	width: 95%;
+	background-color: #ffffff;
+	margin: 6% auto 0 auto;
 }
 
 .about-rpr{
     text-align: center;
-    margin:0 0 5% auto;
+    margin: 0 0 5% auto;
 }
 
 .about-button{
@@ -286,6 +298,18 @@ li a {
 
 .home .about-blurb{
 	margin: -90px auto 0 auto;
+}
+
+.sidebar {
+	font-size: 12px;
+	background-color: #928a5d;
+	margin: 6% auto 0 auto;
+	padding-left: 2.5%;
+}
+
+
+.side-nav {
+	width: 75%;
 }
 
 .services-thumbnails {
@@ -461,6 +485,7 @@ li a {
 .footer-content{
     width: 100%;
     background-color: #3e3128;
+	border-top: 5px solid #928a5d;
 }
 
 
@@ -579,6 +604,7 @@ textarea {
     }
     
 }
+
 /* Tablet Styles */
 
 @media all and (min-width:768px) and (max-width:1279px){
@@ -641,6 +667,17 @@ textarea {
             margin-top: -15px;
             padding:0;
         }
+	
+		.home .logo-nav-header .medium-up-menu li:hover > ul {
+			margin-top: -19.6%;
+			margin-left: -30px:
+			
+		}
+		
+	.home .medium-up-menu ul li {
+		padding: 0 0 0 0;
+		margin-top: -6px;
+	}
         
         .footer-map iframe{
             display:block;
@@ -648,6 +685,7 @@ textarea {
             height: 320px;
         }
 }
+
 /* Phone Styles */
     
 @media all and (min-width:321px) and (max-width:767px){
@@ -659,6 +697,7 @@ textarea {
     
     .nav-sticky{
         padding: 0 0 2% 0;
+		background-color: rbga(255,255,255, .75);
     }
     
     .logo {
@@ -780,6 +819,10 @@ textarea {
     .image-container{
         padding: 37.5% 0 37.5% 0;
     }
+	
+	.content {
+		margin-top: 10%;
+	}
     
     .footer-map{
         display:block;
@@ -812,6 +855,7 @@ textarea {
     
     .nav-sticky{
         padding: 0 0 4% 0;
+		background-color: rbga(255,255,255, .75);
     }
     
     .logo {
@@ -934,6 +978,10 @@ textarea {
     .image-container{
         padding: 37.5% 0 37.5% 0;
     }
+	
+	.content {
+		margin-top: 15%;
+	}
     
     #footer-map{
       display: none;

@@ -12,6 +12,8 @@ register_nav_menus(array(
     'main-menu' => __('Main'), 
 ));
 
+//TODO register and enqueue header scripts!
+
 function my_theme_scripts() {
 wp_register_script('migrate', "https://code.jquery.com/jquery-migrate-1.2.1.min.js", array(), '1.2.1', true);
 wp_enqueue_script('migrate');

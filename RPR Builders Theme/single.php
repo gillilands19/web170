@@ -25,6 +25,7 @@ if(is_front_page()) {
 					
 				
                 </article>
+            
             </section>
 			
 			<?php get_sidebar(); ?>
@@ -48,8 +49,7 @@ if(is_front_page()) {
             </div>
         </a>
 	</div>
-	<p>index.php</p>
-	
+<p>single.php</p>	
 <?php get_footer(); ?>
 	
 	
