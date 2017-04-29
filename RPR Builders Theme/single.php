@@ -1,7 +1,7 @@
+<?php
+
 //TODO modify classes/styles so content and sidebar can fit in three column grid
 //TODO fix sidebar width in mobile view
-
-<?php
 
 if(is_front_page()) {
 	get_header('home');
@@ -18,7 +18,16 @@ if(is_front_page()) {
                 <article class="about-blurb" id="about">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
+				<?php the_post_thumbnail('single_post_featured'); ?>
+					
                 <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+				<small>
+					<?php the_time('F j, Y'); ?>
+					<br>
+					Posted by: <?php the_author(); ?>
+					<br>
+					<?php the_category(', '); ?>
+				</small>	
 					
                 <?php the_content(''); ?>
 					

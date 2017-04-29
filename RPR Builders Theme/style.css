@@ -252,6 +252,22 @@ li a {
 	margin: 6% auto 0 auto;
 }
 
+.blog-content #about h2 {
+	padding-top: 35px;
+}
+
+.blog-content #about p {
+	padding-bottom: 0;
+}
+
+.blog-content #about small a {
+	color: #928a5d;
+}
+
+#about h2 a, #about h2 a:visited {
+	color: #3e3128
+}
+
 .about-rpr{
     text-align: center;
     margin: 0 0 5% auto;
@@ -323,7 +339,7 @@ li a {
 	background-color: #928a5d;
 	margin: 8% auto 0 auto;
 	padding-left: 2.5%;
-	border: 4px solid #3e3128;
+	border: 2px solid #3e3128;
 	box-shadow: 2px 2px 5px #000000;
 }
 
@@ -848,10 +864,18 @@ textarea {
 	.content {
 		margin-top: 10%;
 	}
+	
+	.recent-posts {
+		display: none;
+	}
     
     .footer-map{
         display:block;
     }
+	
+	.sidebar {
+		display: none;
+	}
   
     .footer-map iframe{
         display:block;
@@ -1004,8 +1028,16 @@ textarea {
         padding: 37.5% 0 37.5% 0;
     }
 	
-	.content {
+	.home .content {
 		margin-top: 15%;
+	}
+	
+	.sidebar {
+		display: none;
+	}
+	
+	.recent-posts {
+		display: none;
 	}
     
     #footer-map{
@@ -1046,14 +1078,25 @@ a img.alignleft {
 a img.aligncenter {
     display: block; margin-left: auto; margin-right: auto
 }
+
+img.wp-post-image,
+img.attachment-thumbnail,
+img.attachment-medium,
+img.attachment-large,
+img.attachment-full {
+	width: 100%;
+	height:auto;
+}
+
 /* End wp img classes */
 
 #about p {
     text-align: justify;
+	margin: 2em 0 2em 0;
 }
 
 #about h2 {
-    padding-bottom: 1em;
+    padding-bottom: .5em;
 }
 
 #about form {

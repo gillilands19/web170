@@ -12,12 +12,21 @@ if(is_front_page()) {
                 <br>
                 <br>
                 
-                <article class="about-blurb" id="about">
+                
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
+				<article class="about-blurb" id="about">	
                 <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					
-                <?php the_content(''); ?>
+				<?php the_post_thumbnail('full'); ?>
+					<br>
+				<small>
+					<?php the_time('F j, Y'); ?>
+					<br>
+					Posted by: <?php the_author(); ?>
+					<br>
+					<?php the_category(', '); ?>
+				</small>	
+                <?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>"> Read More </a>
 					
                 <?php endwhile; endif; ?>
 					

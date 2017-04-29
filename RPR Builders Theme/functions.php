@@ -12,6 +12,10 @@ register_nav_menus(array(
     'main-menu' => __('Main'), 
 ));
 
+add_theme_support('post-thumbnails');
+
+add_image_size('single_post_featured', 1000, 750, true);
+
 //TODO register and enqueue header scripts!
 
 function my_theme_scripts() {
