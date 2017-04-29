@@ -1,5 +1,3 @@
-//TODO modify classes/styles so content and sidebar can fit in three column grid
-
 <?php
 
 if(is_front_page()) {
@@ -22,12 +20,18 @@ if(is_front_page()) {
                 <?php the_content(''); ?>
 					
                 <?php endwhile; endif; ?>
-					
-				
-                </article>
+				</article>
             </section>
-			
-			<?php get_sidebar(); ?>
+			<section class="recent-posts col span_1_of_3">
+				<h2>Recent Posts</h2>
+				<ul>
+					<?php rewind_posts(); ?>
+					<?php query_posts('showposts=4'); ?>
+					<?php while (have_posts()) : the_post(); ?>
+					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+					<?php endwhile; ?>
+				</ul>
+			</section>
             
         <!-- BEGIN SERVICES THUMBNAILS -->
 			<div class="services-thumbnails grid group"></div>
@@ -48,9 +52,6 @@ if(is_front_page()) {
             </div>
         </a>
 	</div>
-	<p>index.php</p>
+	<p>front-page.php</p>
 	
 <?php get_footer(); ?>
-	
-	
-	

@@ -300,11 +300,36 @@ li a {
 	margin: -90px auto 0 auto;
 }
 
+.recent-posts {
+	text-align: center;
+	margin: -35px auto 0 auto;
+	font-size: 12px;
+}
+
+.recent-posts h2 {
+	margin-left: 32px;
+}
+
+
+.recent-posts li {
+	list-style: none;
+	padding: 2.5% 0 2.5% 0;
+	
+}
+
 .sidebar {
+	width: 30%;
 	font-size: 12px;
 	background-color: #928a5d;
-	margin: 6% auto 0 auto;
+	margin: 8% auto 0 auto;
 	padding-left: 2.5%;
+	border: 4px solid #3e3128;
+	box-shadow: 2px 2px 5px #000000;
+}
+
+.sidebar li {
+	padding: 2.5%;
+	list-style: none;
 }
 
 

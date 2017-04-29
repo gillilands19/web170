@@ -1,4 +1,5 @@
 //TODO modify classes/styles so content and sidebar can fit in three column grid
+//TODO fix sidebar width in mobile view
 
 <?php
 

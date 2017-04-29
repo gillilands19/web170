@@ -1,5 +1,3 @@
-//TODO modify classes/styles so content and sidebar can fit in three column grid
-
 <?php
 
 if(is_front_page()) {
