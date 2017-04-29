@@ -336,16 +336,16 @@ li a {
 .sidebar {
 	width: 30%;
 	font-size: 12px;
-	background-color: #928a5d;
-	margin: 8% auto 0 auto;
+	background: radial-gradient(circle at 25% 50%, #d3cca5 10%, #928a5d, #3e3128);
+	margin: 15% auto 0 auto;
 	padding-left: 2.5%;
-	border: 2px solid #3e3128;
+	border: 4px solid #3e3128;
 	box-shadow: 2px 2px 5px #000000;
 }
 
 .sidebar li {
 	padding: 2.5%;
-	list-style: none;
+	list-style: upper-roman;
 }
 
 

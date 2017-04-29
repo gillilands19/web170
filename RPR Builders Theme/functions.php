@@ -12,6 +12,13 @@ register_nav_menus(array(
     'main-menu' => __('Main'), 
 ));
 
+register_sidebar(array(
+	'before-sidebar' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>',
+));
+
 add_theme_support('post-thumbnails');
 
 add_image_size('single_post_featured', 1000, 750, true);

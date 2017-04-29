@@ -15,11 +15,10 @@
     	</ul>
 		<?php endif; ?>
 		<?php if (!(is_page())) : ?>
-		<h2>Blog</h2>
+		<h2>Categories</h2>
 		<ul class="sub-nav-items"><?php wp_list_categories(array('title_li' => __(''))); ?></ul>
 		<?php endif; ?>
+		<?php dynamic_sidebar(1); ?>
 	</div>
-	
-	<?php dynamic_sidebar(1); ?>
 	
 </aside>
