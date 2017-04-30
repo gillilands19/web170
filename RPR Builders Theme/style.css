@@ -270,7 +270,7 @@ li a {
 
 .about-rpr{
     text-align: center;
-    margin: 0 0 5% auto;
+    margin: 0 0 5% 0;
 }
 
 .about-button{
@@ -306,10 +306,8 @@ li a {
 }
 
 .about-blurb{
-    width: 80%;
-    max-width: 1280px;
-    text-align: center;
     margin: 8% auto;
+	padding: 0 5% 0 5%;
 }
 
 .home .about-blurb{
@@ -336,11 +334,9 @@ li a {
 .sidebar {
 	width: 30%;
 	font-size: 12px;
-	background: radial-gradient(circle at 25% 50%, #d3cca5 10%, #928a5d, #3e3128);
+	/*background: radial-gradient(circle at 25% 50%, #d3cca5 10%, #928a5d, #3e3128);*/
 	margin: 15% auto 0 auto;
 	padding-left: 2.5%;
-	border: 4px solid #3e3128;
-	box-shadow: 2px 2px 5px #000000;
 }
 
 .sidebar li {
@@ -348,9 +344,14 @@ li a {
 	list-style: upper-roman;
 }
 
+.widget {
+	border: 2px solid #3e3128;
+	margin: 0 0 30px 0;
+	border-radius: 5px;
+}
 
-.side-nav {
-	width: 75%;
+#side-nav h2, #side-nav ul{
+	margin-left: 10px;
 }
 
 .services-thumbnails {
@@ -358,6 +359,14 @@ li a {
 	height: 10px;
 	background-color: #3e3128;
 	border: 3px solid #928a5d;
+}
+
+#blog-services {
+	width: 100%;
+}
+
+.thumbnail-wrapper {
+	margin-left: 2%;
 }
 
 .work-thumb-one{
@@ -1092,7 +1101,7 @@ img.attachment-full {
 
 #about p {
     text-align: justify;
-	margin: 2em 0 2em 0;
+	width: 100%;
 }
 
 #about h2 {

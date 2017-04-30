@@ -40,7 +40,9 @@ if(is_front_page()) {
 			<?php get_sidebar(); ?>
             
         <!-- BEGIN SERVICES THUMBNAILS -->
-			<div class="services-thumbnails grid group"></div>
+		<div id="blog-services" class="services-thumbnails grid group"></div>
+			
+		<div class="thumbnail-wrapper">	
         <a href="#">
             <div class="work-thumb-one col span_1_of_3 image-container">
                 <p id="image-title-one">Custom Cabinetry</p>
@@ -57,6 +59,7 @@ if(is_front_page()) {
                  <p id="image-title-three">Furniture</p>
             </div>
         </a>
+	</div>
 	</div>
 <p>single.php</p>	
 <?php get_footer(); ?>
