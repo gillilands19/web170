@@ -885,6 +885,10 @@ textarea {
 	.sidebar {
 		display: none;
 	}
+	
+	.thumbnail-wrapper {
+	margin-left: 0;
+}
   
     .footer-map iframe{
         display:block;
@@ -1048,6 +1052,10 @@ textarea {
 	.recent-posts {
 		display: none;
 	}
+	
+	.thumbnail-wrapper {
+	margin-left: 0;
+}
     
     #footer-map{
       display: none;

@@ -1,8 +1,5 @@
 <?php
 
-//TODO modify classes/styles so content and sidebar can fit in three column grid
-//TODO fix sidebar width in mobile view
-
 if(is_front_page()) {
 	get_header('home');
 } else {
