@@ -23,6 +23,8 @@ add_theme_support('post-thumbnails');
 
 add_image_size('single_post_featured', 1000, 750, true);
 
+add_post_type_support( 'page', 'excerpt' );
+
 //TODO register and enqueue header scripts!
 
 function my_theme_scripts() {
@@ -35,3 +37,33 @@ wp_enqueue_script('slider');
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+function get_my_title_tag() {
+	
+	global $post;
+	
+	if ( is_front_page() ) {
+		
+		bloginfo('description');
+	}
+	
+	elseif ( is_page() || is_single() ) {
+		the_title();
+	}
+	else {
+		bloginfo('description');
+	}
+	
+	if ( $post->post_parent ) {
+		
+		echo ' | ';
+		echo get_the_title($post->post_parent);
+	}
+	
+	echo ' | ';
+	bloginfo('name');
+	echo ' | ';
+	echo 'Seattle, WA';
+	
+}
+
